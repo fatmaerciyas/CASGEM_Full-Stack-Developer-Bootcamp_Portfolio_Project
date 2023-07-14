@@ -1,0 +1,40 @@
+﻿@model List<Casgem_Portfolio.Models.Entities.TblResume>
+
+@foreach (var item in Model)
+{
+    <div class="py-5 w3l-resume">
+        <div class="container py-lg-5 py-3">
+            <h5 class="title-small mb-2"> My resume</h5>
+            <h3 class="title-big mb-4">Düşünceleri gerçekleştirmeyi seviyorum </h3>
+            <p>
+                I love graphic design and photography and have been working on my portfolio since 2016. You can download my
+                resume in order to learn the details of my professional life as a designer and photographer. Contact me and
+                we will discuss your projects!
+            </p>
+            <div class="mt-5">
+                <a href="retrina.com/demo/arshia/arshia/pilling-parallax/assets/CV.pdf" download="" class="pill-button"> Cv'mi indir'</a> <!--template'e cv ekle'-->
+
+            </div>
+        </div>
+    </div>
+
+}
+
+
+﻿@model List<Casgem_Portfolio.Models.Entities.TblResume>
+
+@foreach (var item in Model)
+{
+    <div class="py-5 w3l-resume">
+        <div class="container py-lg-5 py-3">
+            <h5 class="title-small mb-2"> @item.Title1</h5>
+            <h3 class="title-big mb-4">@item.Title2</h3>
+            <p>
+                @item.Description
+            </p>
+            <div class="mt-5">
+                <a href="#download" class="btn btn-style btn-primary">Cv'mi İndir</a>
+            </div>
+        </div>
+    </div>
+}

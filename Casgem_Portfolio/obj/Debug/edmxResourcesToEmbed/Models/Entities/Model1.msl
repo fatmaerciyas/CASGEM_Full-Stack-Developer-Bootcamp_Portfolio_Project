@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CasgemPortfolioModelStoreContainer" CdmEntityContainer="CasgemPortfolioEntities">
+    <EntitySetMapping Name="TblContacts">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblContact">
+        <MappingFragment StoreEntitySet="TblContacts">
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblDepartments">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblDepartment">
+        <MappingFragment StoreEntitySet="TblDepartment">
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblEmployees">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblEmployee">
+        <MappingFragment StoreEntitySet="TblEmployee">
+          <ScalarProperty Name="EmployeeDepartment" ColumnName="EmployeeDepartment" />
+          <ScalarProperty Name="EmployeeSalary" ColumnName="EmployeeSalary" />
+          <ScalarProperty Name="EmployeeCity" ColumnName="EmployeeCity" />
+          <ScalarProperty Name="EmployeeSurname" ColumnName="EmployeeSurname" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAbouts">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblAbout">
+        <MappingFragment StoreEntitySet="TblAbouts">
+          <ScalarProperty Name="aboutShort" ColumnName="aboutShort" />
+          <ScalarProperty Name="aboutTitle" ColumnName="aboutTitle" />
+          <ScalarProperty Name="aboutImage" ColumnName="aboutImage" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblFeatures">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblFeature">
+        <MappingFragment StoreEntitySet="TblFeature">
+          <ScalarProperty Name="FeatureImageURL" ColumnName="FeatureImageURL" />
+          <ScalarProperty Name="FeatureDescription" ColumnName="FeatureDescription" />
+          <ScalarProperty Name="FeatureTitle" ColumnName="FeatureTitle" />
+          <ScalarProperty Name="FeatureID" ColumnName="FeatureID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMessages">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblMessage">
+        <MappingFragment StoreEntitySet="TblMessage">
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="MessageSubmit" ColumnName="MessageSubmit" />
+          <ScalarProperty Name="SenderMail" ColumnName="SenderMail" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMyFeatures">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblMyFeature">
+        <MappingFragment StoreEntitySet="TblMyFeatures">
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblProjects">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblProject">
+        <MappingFragment StoreEntitySet="TblProjects">
+          <ScalarProperty Name="ProjectLink" ColumnName="ProjectLink" />
+          <ScalarProperty Name="ProjectImageUrl" ColumnName="ProjectImageUrl" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblReferences">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblReference">
+        <MappingFragment StoreEntitySet="TblReference">
+          <ScalarProperty Name="ImageLink" ColumnName="ImageLink" />
+          <ScalarProperty Name="Thoughts" ColumnName="Thoughts" />
+          <ScalarProperty Name="HomeTown" ColumnName="HomeTown" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblResumes">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblResume">
+        <MappingFragment StoreEntitySet="TblResume">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblServices">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblService">
+        <MappingFragment StoreEntitySet="TblService">
+          <ScalarProperty Name="ServiceContent" ColumnName="ServiceContent" />
+          <ScalarProperty Name="ServiceNumber" ColumnName="ServiceNumber" />
+          <ScalarProperty Name="ServiceIcon" ColumnName="ServiceIcon" />
+          <ScalarProperty Name="ServiceTitle" ColumnName="ServiceTitle" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

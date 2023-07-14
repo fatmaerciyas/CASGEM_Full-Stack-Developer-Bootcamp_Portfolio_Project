@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="df3dedc8639945fda7327e6174eb8eec" Name="Diagram1">
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblContact" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblDepartment" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblEmployee" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblAbout" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblFeature" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblMessage" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblMyFeature" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblProject" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblReference" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblResume" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblService" Width="1.5" PointX="6.75" PointY="3.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

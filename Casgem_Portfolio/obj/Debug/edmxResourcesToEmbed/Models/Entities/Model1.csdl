@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CasgemPortfolioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CasgemPortfolioEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TblContacts" EntityType="CasgemPortfolioModel.TblContact" />
+    <EntitySet Name="TblDepartments" EntityType="CasgemPortfolioModel.TblDepartment" />
+    <EntitySet Name="TblEmployees" EntityType="CasgemPortfolioModel.TblEmployee" />
+    <EntitySet Name="TblAbouts" EntityType="CasgemPortfolioModel.TblAbout" />
+    <EntitySet Name="TblFeatures" EntityType="CasgemPortfolioModel.TblFeature" />
+    <EntitySet Name="TblMessages" EntityType="CasgemPortfolioModel.TblMessage" />
+    <EntitySet Name="TblMyFeatures" EntityType="CasgemPortfolioModel.TblMyFeature" />
+    <EntitySet Name="TblProjects" EntityType="CasgemPortfolioModel.TblProject" />
+    <EntitySet Name="TblReferences" EntityType="CasgemPortfolioModel.TblReference" />
+    <EntitySet Name="TblResumes" EntityType="CasgemPortfolioModel.TblResume" />
+    <EntitySet Name="TblServices" EntityType="CasgemPortfolioModel.TblService" />
+  </EntityContainer>
+  <EntityType Name="TblContact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblDepartment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblEmployee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeSalary" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="EmployeeDepartment" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TblAbout">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="aboutImage" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="aboutTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="aboutShort" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblFeature">
+    <Key>
+      <PropertyRef Name="FeatureID" />
+    </Key>
+    <Property Name="FeatureID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FeatureTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureImageURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblMessage">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SenderMail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MessageSubmit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblMyFeature">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Feature" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblProject">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectImageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblReference">
+    <Key>
+      <PropertyRef Name="ReferenceID" />
+    </Key>
+    <Property Name="ReferenceID" Type="Int32" Nullable="false" />
+    <Property Name="NameSurname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HomeTown" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thoughts" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ImageLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblResume">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblService">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceTitle" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="ServiceIcon" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="ServiceNumber" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ServiceContent" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
+  </EntityType>
+</Schema>

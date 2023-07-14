@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CasgemPortfolioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblAbouts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="aboutImage" Type="varchar" MaxLength="255" />
+    <Property Name="aboutTitle" Type="varchar" MaxLength="255" />
+    <Property Name="aboutShort" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TblContacts">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="int" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Location" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TblDepartment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblEmployee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeSalary" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="EmployeeDepartment" Type="int" />
+  </EntityType>
+  <EntityType Name="TblFeature">
+    <Key>
+      <PropertyRef Name="FeatureID" />
+    </Key>
+    <Property Name="FeatureID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FeatureTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FeatureDescription" Type="nvarchar" MaxLength="1000" />
+    <Property Name="FeatureImageURL" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TblMessage">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="100" />
+    <Property Name="SenderMail" Type="nvarchar" MaxLength="100" />
+    <Property Name="MessageSubmit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Content" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TblMyFeatures">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Feature" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TblProjects">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="int" Nullable="false" />
+    <Property Name="ProjectTitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="ProjectDescription" Type="nvarchar" MaxLength="255" />
+    <Property Name="ProjectImageUrl" Type="nvarchar" MaxLength="255" />
+    <Property Name="ProjectLink" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TblReference">
+    <Key>
+      <PropertyRef Name="ReferenceID" />
+    </Key>
+    <Property Name="ReferenceID" Type="int" Nullable="false" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="255" />
+    <Property Name="HomeTown" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thoughts" Type="nvarchar" MaxLength="255" />
+    <Property Name="ImageLink" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TblResume">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Title2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TblService">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceTitle" Type="nchar" MaxLength="100" />
+    <Property Name="ServiceIcon" Type="nchar" MaxLength="100" />
+    <Property Name="ServiceNumber" Type="char" MaxLength="2" />
+    <Property Name="ServiceContent" Type="nchar" MaxLength="1000" />
+  </EntityType>
+  <EntityContainer Name="CasgemPortfolioModelStoreContainer">
+    <EntitySet Name="TblAbouts" EntityType="Self.TblAbouts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblContacts" EntityType="Self.TblContacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblDepartment" EntityType="Self.TblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblEmployee" EntityType="Self.TblEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblFeature" EntityType="Self.TblFeature" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMessage" EntityType="Self.TblMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMyFeatures" EntityType="Self.TblMyFeatures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblProjects" EntityType="Self.TblProjects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblReference" EntityType="Self.TblReference" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblResume" EntityType="Self.TblResume" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
